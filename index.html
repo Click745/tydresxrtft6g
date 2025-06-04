@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Кликер сайт</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Стиль для заставки */
+        #splash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #splash img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* Основное меню скрыто по умолчанию */
+        #main-menu {
+            display: none;
+            text-align: center;
+        }
+
+        /* Стиль для кнопки кликера */
+        #clicker-btn {
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        #clicker-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Стиль для счетчика */
+        #counter {
+            font-size: 48px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Заставка с изображением -->
+    <div id="splash">
+        <img src="https://cs12.pikabu.ru/post_img/big/2022/11/28/6/166962483813325775.jpg" alt="Загрузка..." />
+    </div>
+
+    <!-- Основное меню -->
+    <div id="main-menu">
+        <h1>Добро пожаловать в кликер!</h1>
+        <button id="clicker-btn">Кликнуть!</button>
+        <div id="counter">0</div>
+    </div>
+
+    <script>
+        // Ждем загрузки страницы
+        window.addEventListener('load', () => {
+            // После 5 секунд скрываем заставку и показываем меню
+            setTimeout(() => {
+                document.getElementById('splash').style.display = 'none';
+                document.getElementById('main-menu').style.display = 'block';
+            }, 5000);
+
+            // Инициализация счетчика
+            let count = 0;
+
+            const button = document.getElementById('clicker-btn');
+            const counterDisplay = document.getElementById('counter');
+
+            // Обработчик клика по кнопке
+            button.addEventListener('click', () => {
+                count++;
+                counterDisplay.textContent = count;
+                // Можно добавить эффект или звук при клике
+                // например, изменение цвета или воспроизведение звука
+                // но это по желанию
+                button.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Кликер сайт</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Стиль для заставки */
+        #splash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #splash img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* Основное меню скрыто по умолчанию */
+        #main-menu {
+            display: none;
+            text-align: center;
+        }
+
+        /* Стиль для кнопки кликера */
+        #clicker-btn {
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        #clicker-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Стиль для счетчика */
+        #counter {
+            font-size: 48px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Заставка с изображением -->
+    <div id="splash">
+        <img src="https://cs12.pikabu.ru/post_img/big/2022/11/28/6/166962483813325775.jpg" alt="Загрузка..." />
+    </div>
+
+    <!-- Основное меню -->
+    <div id="main-menu">
+        <h1>Добро пожаловать в кликер!</h1>
+        <button id="clicker-btn">Кликнуть!</button>
+        <div id="counter">0</div>
+    </div>
+
+    <script>
+        // Ждем загрузки страницы
+        window.addEventListener('load', () => {
+            // После 5 секунд скрываем заставку и показываем меню
+            setTimeout(() => {
+                document.getElementById('splash').style.display = 'none';
+                document.getElementById('main-menu').style.display = 'block';
+            }, 5000);
+
+            // Инициализация счетчика
+            let count = 0;
+
+            const button = document.getElementById('clicker-btn');
+            const counterDisplay = document.getElementById('counter');
+
+            // Обработчик клика по кнопке
+            button.addEventListener('click', () => {
+                count++;
+                counterDisplay.textContent = count;
+                // Можно добавить эффект или звук при клике
+                // например, изменение цвета или воспроизведение звука
+                // но это по желанию
+                button.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+    </script>
+
+</body>
+</html>
